@@ -5,29 +5,19 @@
 /*                                                     +:+                    */
 /*   By: nikos <nikos@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2025/02/13 18:51:27 by nikos         #+#    #+#                 */
-/*   Updated: 2025/02/13 22:19:40 by nikos         ########   odam.nl         */
+/*   Created: 2025/02/13 22:39:39 by nikos         #+#    #+#                 */
+/*   Updated: 2025/02/13 22:58:45 by nikos         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../sed.hpp"
-//we still need to make the .replace file and output there
-int main (int ac, char **av)
-{
-	std::string inputContent;
-	std::string propaganda;
+#include "../Harl.hpp"
 
-	if (ac != 4)
-	{
-		std::cout << "Wrong amount of arguments" << std::endl;
-		return (0);
-	}
-	std::string filename = av[1];
-	std::string s1 = av[2];
-	std::string s2 = av[3];
+int main (){
+	Harl harl;
 
-	inputContent = extractContent(filename);
-	// std::cout << inputContent << std::endl;
-	propaganda = replaceContent(inputContent, s1, s2);
-	std::cout << propaganda << std::endl;
+	harl.complain("DEBUG");
+    harl.complain("INFO");
+    harl.complain("WARNING");
+    harl.complain("ERROR");
+    harl.complain("INVALID");
 }
