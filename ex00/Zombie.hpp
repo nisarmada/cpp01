@@ -6,7 +6,7 @@
 /*   By: nsarmada <nsarmada@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/10 13:28:19 by nsarmada      #+#    #+#                 */
-/*   Updated: 2025/02/12 15:48:50 by nsarmada      ########   odam.nl         */
+/*   Updated: 2025/02/13 12:13:04 by nikos         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Zombie
 		Zombie(std::string name); //constructor
 		~Zombie(); //destructor
 
-		void announce();
+		void announce() const;
 };
 
 	Zombie*	newZombie(std::string name);
