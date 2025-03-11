@@ -6,7 +6,7 @@
 /*   By: nikos <nikos@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/13 18:51:27 by nikos         #+#    #+#                 */
-/*   Updated: 2025/02/13 22:19:40 by nikos         ########   odam.nl         */
+/*   Updated: 2025/03/11 13:21:37 by nsarmada      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int main (int ac, char **av)
 {
 	std::string inputContent;
 	std::string propaganda;
+	std::string outputFilename;
 
 	if (ac != 4)
 	{
@@ -29,5 +30,13 @@ int main (int ac, char **av)
 	inputContent = extractContent(filename);
 	// std::cout << inputContent << std::endl;
 	propaganda = replaceContent(inputContent, s1, s2);
-	std::cout << propaganda << std::endl;
+	outputFilename = filename + ".replace";
+	std::ofstream outputFile(outputFilename);
+	if (!outputFile.is_open())
+	{
+		std::cerr << "Error: Couldnt create " << outputFilename << std::endl;
+		return (EXIT_FAILURE);
+	}
+	outputFile << propaganda;
+	outputFile.close();
 }
