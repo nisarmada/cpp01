@@ -6,7 +6,7 @@
 /*   By: nikos <nikos@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/02/13 17:16:30 by nikos         #+#    #+#                 */
-/*   Updated: 2025/02/13 17:50:18 by nikos         ########   odam.nl         */
+/*   Updated: 2025/03/11 14:39:00 by nsarmada      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 int main ()
 {
-	Weapon w("small dick");
+	Weapon w("baseball bat");
 
 	HumanA bob("Bob", w);
 	bob.attack();
-	w.setType("big dick");
+	w.setType("katana");
 	bob.attack();
 
 
-	Weapon d("Dingdong");
+	Weapon d("knife");
 	HumanB jim("Jim");
 	jim.attack();
 	jim.setWeapon(d);
